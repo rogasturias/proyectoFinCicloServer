@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://CaGuela/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://CaGuela/">
+
+<xs:element name="devolverServicio" type="tns:devolverServicio"/>
+
+<xs:element name="devolverServicioResponse" type="tns:devolverServicioResponse"/>
+
+<xs:element name="enviarCliente" type="tns:enviarCliente"/>
+
+<xs:element name="enviarClienteResponse" type="tns:enviarClienteResponse"/>
+
+<xs:element name="enviarDireccion" type="tns:enviarDireccion"/>
+
+<xs:element name="enviarDireccionResponse" type="tns:enviarDireccionResponse"/>
+
+<xs:element name="enviarPedido" type="tns:enviarPedido"/>
+
+<xs:element name="enviarPedidoResponse" type="tns:enviarPedidoResponse"/>
+
+<xs:element name="enviarPosicion" type="tns:enviarPosicion"/>
+
+<xs:element name="enviarPosicionResponse" type="tns:enviarPosicionResponse"/>
+
+<xs:element name="enviarProducto" type="tns:enviarProducto"/>
+
+<xs:element name="enviarProductoResponse" type="tns:enviarProductoResponse"/>
+
+<xs:element name="enviarServicio" type="tns:enviarServicio"/>
+
+<xs:element name="enviarServicioResponse" type="tns:enviarServicioResponse"/>
+
+<xs:element name="enviarTipoEnvase" type="tns:enviarTipoEnvase"/>
+
+<xs:element name="enviarTipoEnvaseResponse" type="tns:enviarTipoEnvaseResponse"/>
+
+<xs:element name="enviarUsuario" type="tns:enviarUsuario"/>
+
+<xs:element name="enviarUsuarioResponse" type="tns:enviarUsuarioResponse"/>
+
+<xs:element name="hola" type="tns:hola"/>
+
+<xs:element name="holaResponse" type="tns:holaResponse"/>
+
+<xs:complexType name="enviarServicio">
+<xs:sequence>
+<xs:element name="idServicio" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarServicioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:servicio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="servicio">
+<xs:sequence>
+<xs:element name="cliente" type="tns:cliente" minOccurs="0"/>
+<xs:element name="fecha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="port" type="xs:int"/>
+<xs:element name="resultado" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cliente">
+<xs:sequence>
+<xs:element name="activo" type="xs:boolean"/>
+<xs:element name="apellidos" type="xs:string" minOccurs="0"/>
+<xs:element name="direccion" type="tns:direccion" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="identificacionFiscal" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="tipo" type="xs:boolean"/>
+<xs:element name="usuario" type="tns:usuario" minOccurs="0"/>
+<xs:element name="vendedor" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="direccion">
+<xs:sequence>
+<xs:element name="activo" type="xs:boolean"/>
+<xs:element name="callePiso" type="xs:string" minOccurs="0"/>
+<xs:element name="ciudad" type="xs:string" minOccurs="0"/>
+<xs:element name="cliente" type="tns:cliente" minOccurs="0"/>
+<xs:element name="codigoPostal" type="xs:string" minOccurs="0"/>
+<xs:element name="comunidadAutonoma" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="pais" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="usuario">
+<xs:sequence>
+<xs:element name="activo" type="xs:boolean"/>
+<xs:element name="clave" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarPosicion">
+<xs:sequence>
+<xs:element name="idPosicion" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarPosicionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:posicion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="posicion">
+<xs:sequence>
+<xs:element name="cantidad" type="xs:int"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="pedido" type="tns:pedido" minOccurs="0"/>
+<xs:element name="producto" type="tns:producto" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="pedido">
+<xs:sequence>
+<xs:element name="aceptado" type="xs:boolean"/>
+<xs:element name="activo" type="xs:boolean"/>
+<xs:element name="comprador" type="tns:cliente" minOccurs="0"/>
+<xs:element name="enviado" type="xs:boolean"/>
+<xs:element name="fecha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="iva" type="xs:float"/>
+<xs:element name="neto" type="xs:float"/>
+<xs:element name="recibido" type="xs:boolean"/>
+<xs:element name="total" type="xs:float"/>
+<xs:element name="vendedor" type="tns:cliente" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="producto">
+<xs:sequence>
+<xs:element name="activo" type="xs:boolean"/>
+<xs:element name="cliente" type="tns:cliente" minOccurs="0"/>
+<xs:element name="composicion" type="xs:string" minOccurs="0"/>
+<xs:element name="descripcion" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="marca" type="xs:string" minOccurs="0"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="peso" type="xs:string" minOccurs="0"/>
+<xs:element name="precioSinIva" type="xs:float"/>
+<xs:element name="tipo" type="tns:tipoEnvase" minOccurs="0"/>
+<xs:element name="tipoEnvase" type="tns:tipoEnvase" minOccurs="0"/>
+<xs:element name="tipoIVA" type="xs:float"/>
+<xs:element name="unidades" type="xs:int"/>
+<xs:element name="vendedor" type="tns:cliente" minOccurs="0"/>
+<xs:element name="volumen" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoEnvase">
+<xs:sequence>
+<xs:element name="animal" type="xs:boolean"/>
+<xs:element name="envaseCristal" type="xs:boolean"/>
+<xs:element name="envaseMetalico" type="xs:boolean"/>
+<xs:element name="envasePlastico" type="xs:boolean"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="pescado" type="xs:boolean"/>
+<xs:element name="refrigerado" type="xs:boolean"/>
+<xs:element name="vegetal" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarTipoEnvase">
+<xs:sequence>
+<xs:element name="idTipoEnvase" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarTipoEnvaseResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tipoEnvase" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarProducto">
+<xs:sequence>
+<xs:element name="idProducto" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarProductoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:producto" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hola">
+<xs:sequence>
+<xs:element name="usuario" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="holaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarUsuario">
+<xs:sequence>
+<xs:element name="idUsuario" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:usuario" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarPedido">
+<xs:sequence>
+<xs:element name="idPedido" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarPedidoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:pedido" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="devolverServicio">
+<xs:sequence>
+<xs:element name="index" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="devolverServicioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:servicio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarDireccion">
+<xs:sequence>
+<xs:element name="idDireccion" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarDireccionResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:direccion" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarCliente">
+<xs:sequence>
+<xs:element name="idCliente" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="enviarClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:cliente" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

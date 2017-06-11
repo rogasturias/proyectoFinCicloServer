@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="CaGuela" targetNamespace="http://CaGuela/" xmlns:tns="http://CaGuela/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:fi="http://java.sun.com/xml/ns/wsit/2006/09/policy/fastinfoset/service" xmlns:tcp="http://java.sun.com/xml/ns/wsit/2006/09/policy/soaptcp/service" 
+ >
+    <message name="enviarUsuario"/>
+    <message name="enviarUsuarioResponse"/>
+    <message name="enviarDireccion"/>
+    <message name="enviarDireccionResponse"/>
+    <message name="enviarCliente"/>
+    <message name="enviarClienteResponse"/>
+    <message name="enviarPedido"/>
+    <message name="enviarPedidoResponse"/>
+    <message name="enviarPosicion"/>
+    <message name="enviarPosicionResponse"/>
+    <message name="enviarProducto"/>
+    <message name="enviarProductoResponse"/>
+    <message name="enviarServicio"/>
+    <message name="enviarServicioResponse"/>
+    <message name="enviarTipoEnvase"/>
+    <message name="enviarTipoEnvaseResponse"/>
+    <message name="login"/>
+    <message name="loginResponse"/>
+    <message name="guardarUsuario"/>
+    <message name="guardarUsuarioResponse"/>
+    <message name="actualizaUsuario"/>
+    <message name="actualizaUsuarioResponse"/>
+    <message name="guardaDireccion"/>
+    <message name="guardaDireccionResponse"/>
+    <message name="actualizaDireccion"/>
+    <message name="actualizaDireccionResponse"/>
+    <message name="guardaCliente"/>
+    <message name="guardaClienteResponse"/>
+    <message name="actualizaCliente"/>
+    <message name="actualizaClienteResponse"/>
+    <message name="actualizaProducto"/>
+    <message name="actualizaProductoResponse"/>
+    <message name="guardaProducto"/>
+    <message name="guardaProductoResponse"/>
+    <message name="actualizaTipoEnvase"/>
+    <message name="actualizaTipoEnvaseResponse"/>
+    <message name="guardaTipoEnvase"/>
+    <message name="guardaTipoEnvaseResponse"/>
+    <message name="guardaPedido"/>
+    <message name="guardaPedidoResponse"/>
+    <message name="actualizaPedido"/>
+    <message name="actualizaPedidoResponse"/>
+    <message name="guardarPosicion"/>
+    <message name="guardarPosicionResponse"/>
+    <message name="actualizaPosicion"/>
+    <message name="actualizaPosicionResponse"/>
+    <message name="productosCompradosHabitualmente"/>
+    <message name="productosCompradosHabitualmenteResponse"/>
+    <message name="pedidosCliente"/>
+    <message name="pedidosClienteResponse"/>
+    <message name="pedidosVendedor"/>
+    <message name="pedidosVendedorResponse"/>
+    <message name="productosGamaVendedor"/>
+    <message name="productosGamaVendedorResponse"/>
+    <message name="todosVendedores"/>
+    <message name="todosVendedoresResponse"/>
+    <message name="posicionesPendientesVendedor"/>
+    <message name="posicionesPendientesVendedorResponse"/>
+    <portType name="CaGuela">
+        <operation name="enviarUsuario">
+            <input message="tns:enviarUsuario"/>
+            <output message="tns:enviarUsuarioResponse"/>
+        </operation>
+        <operation name="enviarDireccion">
+            <input message="tns:enviarDireccion"/>
+            <output message="tns:enviarDireccionResponse"/>
+        </operation>
+        <operation name="enviarCliente">
+            <input message="tns:enviarCliente"/>
+            <output message="tns:enviarClienteResponse"/>
+        </operation>
+        <operation name="enviarPedido">
+            <input message="tns:enviarPedido"/>
+            <output message="tns:enviarPedidoResponse"/>
+        </operation>
+        <operation name="enviarPosicion">
+            <input message="tns:enviarPosicion"/>
+            <output message="tns:enviarPosicionResponse"/>
+        </operation>
+        <operation name="enviarProducto">
+            <input message="tns:enviarProducto"/>
+            <output message="tns:enviarProductoResponse"/>
+        </operation>
+        <operation name="enviarServicio">
+            <input message="tns:enviarServicio"/>
+            <output message="tns:enviarServicioResponse"/>
+        </operation>
+        <operation name="enviarTipoEnvase">
+            <input message="tns:enviarTipoEnvase"/>
+            <output message="tns:enviarTipoEnvaseResponse"/>
+        </operation>
+        <operation name="login">
+            <input message="tns:login"/>
+            <output message="tns:loginResponse"/>
+        </operation>
+        <operation name="guardarUsuario">
+            <input message="tns:guardarUsuario"/>
+            <output message="tns:guardarUsuarioResponse"/>
+        </operation>
+        <operation name="actualizaUsuario">
+            <input message="tns:actualizaUsuario"/>
+            <output message="tns:actualizaUsuarioResponse"/>
+        </operation>
+        <operation name="guardaDireccion">
+            <input message="tns:guardaDireccion"/>
+            <output message="tns:guardaDireccionResponse"/>
+        </operation>
+        <operation name="actualizaDireccion">
+            <input message="tns:actualizaDireccion"/>
+            <output message="tns:actualizaDireccionResponse"/>
+        </operation>
+        <operation name="guardaCliente">
+            <input message="tns:guardaCliente"/>
+            <output message="tns:guardaClienteResponse"/>
+        </operation>
+        <operation name="actualizaCliente">
+            <input message="tns:actualizaCliente"/>
+            <output message="tns:actualizaClienteResponse"/>
+        </operation>
+        <operation name="actualizaProducto">
+            <input message="tns:actualizaProducto"/>
+            <output message="tns:actualizaProductoResponse"/>
+        </operation>
+        <operation name="guardaProducto">
+            <input message="tns:guardaProducto"/>
+            <output message="tns:guardaProductoResponse"/>
+        </operation>
+        <operation name="actualizaTipoEnvase">
+            <input message="tns:actualizaTipoEnvase"/>
+            <output message="tns:actualizaTipoEnvaseResponse"/>
+        </operation>
+        <operation name="guardaTipoEnvase">
+            <input message="tns:guardaTipoEnvase"/>
+            <output message="tns:guardaTipoEnvaseResponse"/>
+        </operation>
+        <operation name="guardaPedido">
+            <input message="tns:guardaPedido"/>
+            <output message="tns:guardaPedidoResponse"/>
+        </operation>
+        <operation name="actualizaPedido">
+            <input message="tns:actualizaPedido"/>
+            <output message="tns:actualizaPedidoResponse"/>
+        </operation>
+        <operation name="guardarPosicion">
+            <input message="tns:guardarPosicion"/>
+            <output message="tns:guardarPosicionResponse"/>
+        </operation>
+        <operation name="actualizaPosicion">
+            <input message="tns:actualizaPosicion"/>
+            <output message="tns:actualizaPosicionResponse"/>
+        </operation>
+        <operation name="productosCompradosHabitualmente">
+            <input message="tns:productosCompradosHabitualmente"/>
+            <output message="tns:productosCompradosHabitualmenteResponse"/>
+        </operation>
+        <operation name="pedidosCliente">
+            <input message="tns:pedidosCliente"/>
+            <output message="tns:pedidosClienteResponse"/>
+        </operation>
+        <operation name="pedidosVendedor">
+            <input message="tns:pedidosVendedor"/>
+            <output message="tns:pedidosVendedorResponse"/>
+        </operation>
+        <operation name="productosGamaVendedor">
+            <input message="tns:productosGamaVendedor"/>
+            <output message="tns:productosGamaVendedorResponse"/>
+        </operation>
+        <operation name="todosVendedores">
+            <input message="tns:todosVendedores"/>
+            <output message="tns:todosVendedoresResponse"/>
+        </operation>
+        <operation name="posicionesPendientesVendedor">
+            <input message="tns:posicionesPendientesVendedor"/>
+            <output message="tns:posicionesPendientesVendedorResponse"/>
+        </operation>
+    </portType>
+    <binding name="CaGuelaPortBinding" type="tns:CaGuela">
+        <wsp:PolicyReference URI="#CaGuelaPortBindingPolicy"/>
+        <operation name="enviarUsuario">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="enviarDireccion">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="enviarCliente">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="enviarPedido">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="enviarPosicion">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="enviarProducto">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="enviarServicio">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="enviarTipoEnvase">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="login">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="guardarUsuario">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="actualizaUsuario">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="guardaDireccion">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="actualizaDireccion">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="guardaCliente">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="actualizaCliente">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="actualizaProducto">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="guardaProducto">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="actualizaTipoEnvase">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="guardaTipoEnvase">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="guardaPedido">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="actualizaPedido">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="guardarPosicion">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="actualizaPosicion">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="productosCompradosHabitualmente">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="pedidosCliente">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="pedidosVendedor">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="productosGamaVendedor">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="todosVendedores">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="posicionesPendientesVendedor">
+            <input/>
+            <output/>
+        </operation>
+    </binding>
+    <service name="CaGuela">
+        <port name="CaGuelaPort" binding="tns:CaGuelaPortBinding"/>
+    </service>
+    <wsp:Policy wsu:Id="CaGuelaPortBindingPolicy">
+        <wsp:ExactlyOne>
+            <wsp:All/>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+</definitions>
